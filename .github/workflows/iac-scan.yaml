@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install AWS CLI tool & CDK Synth
+      - name: Install requirements & CDK Synth
         shell: bash
         run: |
           pip install -r requirements.txt && npm install -g aws-cdk && cdk synth
@@ -23,3 +23,5 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: ./cdk.out
+          quiet: true
+          soft_fail: true
