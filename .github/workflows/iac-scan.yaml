@@ -1,0 +1,20 @@
+name: IaC Scan
+on:
+  workflow_disptach
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Install AWS CLI tool & CDK Synth
+      shell: bash
+      run: |
+        npm install -g aws-cdk && cdk synth
+    - name: ls
+      shell: bash
+      run: |
+        ls
+
+
+
