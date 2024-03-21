@@ -14,7 +14,8 @@ jobs:
       - name: Install AWS CLI tool & CDK Synth
         shell: bash
         run: |
-          npm install -g aws-cdk && cdk synth
+          npm install -g aws-cdk && pip install -r requirements.txt
+
       - name: ls
         shell: bash
         run: |
