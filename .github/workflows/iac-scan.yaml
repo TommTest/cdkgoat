@@ -1,6 +1,7 @@
 name: IaC Scan
 on:
-  workflow_disptach
+  workflow_disptach:
+
 
 jobs:
   runs-on: ubuntu-latest
