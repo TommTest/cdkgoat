@@ -18,4 +18,8 @@ jobs:
       - name: ls
         shell: bash
         run: |
-          ls
+          ls cdk.out
+      - name: Checkov scan
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: ./cdk.out
